@@ -48,9 +48,9 @@ jobs:
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'dv-cute-perch'
+          app-name: 'devopsrm'
           publish-profile: ${{ secrets.AZUREPUBLISH }}
-          images: ${{ secrets.USERNAME }}/devops:${{ github.sha }} .
+          images: '${{ secrets.USERNAME }}/devops:${{ github.sha }}'' 
          
       
 
