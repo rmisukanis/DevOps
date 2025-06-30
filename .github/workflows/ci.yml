@@ -19,3 +19,14 @@ jobs:
     - name: List Files
       run: |
        echo "Terry is teaching"
+
+    - name: Install Dependencies
+      run: |
+       python -m pip install --upgrade pip
+       pip install -r requirements.txt
+       python -m pip install flake8
+
+    
+    
+  
+    
