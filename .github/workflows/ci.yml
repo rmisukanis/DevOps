@@ -39,6 +39,11 @@ jobs:
         with:
           username: ${{secrets.USERNAME}}
           password: ${{secrets.PASSWORD}}
+
+      - name: Build and Push Image
+        run: |
+          docker build -t ${{ secrets.USERNAME }}/devops:${{ github.sha }} .
+          docker push ${{ secrets.USERNAME }}/devops:${{ github.sha }}
       
 
       
